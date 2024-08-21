@@ -13,23 +13,22 @@
     />
     <link rel="stylesheet" href="./STYLE.CSS" />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <title>KO`K GURUHGA A`ZO BO`LISH</title>
+    <title>🔵KO`K GURUHGA A`ZO BO`LISH🔵</title>
   </head>
   <body>
     <div class="tekst">AMOR FATI</div>
     <form action="" method="get" class="con">
-      <label for="fname">Ismingiz </label>
-      <input id="fname" type="text" />
-      <label for="email">Telefon raqamingiz </label>
-      <input id="email" type="tel" />
+      <label for="fname">Ismingiz va Familyangiz </label>
+      <input id="fname" type="text" required />
+      <label for="email">Pubg Id raqamingiz</label>
+      <input id="email" type="number" required minlength="10" />
 
-      <label for="password"
-        >Nima sababtan ko`k jamoaga qo`shilmoqchisiz?
-      </label>
+      <label for="password">PUBG user name</label>
 
-      <textarea id="password"></textarea>
-
-      <button onclick="alicho()" type="submit">GURUHGA QO`SHILISH</button>
+      <input id="password" type="text" required />
+      <label for="password">Telegram user name</label>
+      <input id="kere" type="text" required />
+      <button onclick="alicho()" type="submit">ARIZA YUBORISH</button>
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
@@ -37,11 +36,13 @@
         let fname = document.getElementById("fname").value;
         let email = document.getElementById("email").value;
         let password = document.getElementById("password").value;
+        let nike = document.getElementById("kere").value;
+
         event.preventDefault();
         let telegram_bot_id = "7045945237:AAEDmcuoX22HE23jiuztBAvzDziptzK0Y2k";
 
         let chat_id = 6665877403;
-        let message = `🔵 Ismi: ${fname}; Nomeri: ${email}; Sababi: ${password} 🔵`;
+        let message = `🔵\nIsmi va Familyasi : ${fname}; \nPubg id : ${email}; \nPubg user name: ${password};\nTelegram user name: @${nike} ;\n🔵`;
         let settings = {
           async: true,
           crossDomain: true,
@@ -59,7 +60,7 @@
         };
         $.ajax(settings).done(function (response) {
           alert(
-            "🔵KO`K GURUH JAMOASIGA ARIZANGIZ YUBORILDI ARIZANGIZ KO`RIB CHIQIB SIZGA ALOQAGA CHIQAMIZ🔵"
+            "🔵KO`K GURUH JAMOASIGA ARIZANGIZ YUBORILDI TEZ ORADA SIZ BILAN BO`G`LANAMIZ🔵"
           );
 
           window.location.href = "https://t.me/+kdU-NT9bSIU2MGJi";
@@ -67,6 +68,8 @@
         document.getElementById("fname").value = "";
         document.getElementById("email").value = "";
         document.getElementById("password").value = "";
+        document.getElementById("kere").value = "";
+
         return false;
       }
     </script>
